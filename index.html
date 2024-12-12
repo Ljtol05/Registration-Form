@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <hr><br>
+  <h3>Provide your information</h3><br>
+  <form action="http://localhost:3000/register" method="post">
+    <label for="name"><strong>Name*:</strong></label><br>
+    <input type="text" id="name" name="name" minlength="2" maxlength="30" size="35" spellcheck="true" placeholder="Name" aria-required="true"><br><br>
+    <label for="email"><strong>Email*:</strong></label><br>
+    <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" placeholder="John123@example.com" required><br><br>
+    <label for="telephone"><strong>Telephone:</strong></label><br>
+    <input type="tel" id="telephone1" name="telephone1" size="3" pattern="[0-9]{3}" minlength="3" maxlength="3" placeholder="555" required> -
+    <input type="tel" id="telephone2" name="telephone2" size="3" pattern="[0-9]{3}" minlength="3" maxlength="3" placeholder="555" required> -
+    <input type="tel" id="telephone3" name="telephone3" size="4" pattern="[0-9]{4}" minlength="4" maxlength="4" placeholder="5555" required><br><br><br>
+    <label for="dob"><strong>DOB*</strong></label><br>
+    <input type="date" id="dob" name="dob" value="1990-01-01" min="1990-01-01" max="2024-01-01" required><br><br>
+    <fieldset>
+      <legend>Pick Your Gender</legend>
+
+      <div>
+        <input type="radio" id="male" name="gender" value="male" aria-checked="false">
+        <label for="male"><strong>Male</strong></label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="gender" value="female" aria-checked="false">
+        <label for="female"><strong>Female</strong></label>
+      </div>
+      <div>
+        <input type="radio" id="other" name="gender" value="other" aria-checked="false">
+        <label for="other"><strong>Other</strong></label>
+      </div>
+    </fieldset><br><br>
+    <label for="household-sz"><strong>Household Size</strong></label><br>
+    <input type="number" id="household-sz" name="household-sz" min="1" max="10" required><br><br>
+    <label for="income"><strong>Annual Income</strong></label><br>
+    <select id="income" name="income" required>
+      <option value="">--Select Your Income--</option>
+      <option value="20000">20,000</option>
+      <option value="40000">40,000</option>
+      <option value="60000">60,000</option>
+      <option value="80000">80,000</option>
+      <option value="100000">100,000</option>
+      <option value="150000">150,000</option>
+      <option value="200000">200,000</option>
+      <option value="250000">250,000</option>
+      <option value="300000">300,000</option>
+      <option value="350000">350,000</option>
+      <option value="400000">400,000</option>
+      <option value="450000">450,000</option>
+      <option value="500000">500,000</option>
+    </select>
+    <br><br>
+    <label for="message"><strong>Message:</strong></label><br>
+    <div style="position: relative;"></div>
+      <textarea id="message" name="message" rows="4" cols="50" minlength="10" maxlength="200" placeholder="Write your message here..."></textarea>
+      <label for="ctr-limit" style="position: absolute; bottom: -40px; left: 290px;">200 Character Limit</label>
+    </div><br><br>
+    <label for="userPassword"><strong>Password*</strong></label><br>
+    <input type="password" id="userPassword" autocomplete="new-password" minlength="8" maxlength="15" placeholder="password" required><br><br>
+    <label for="confirmPassword"><strong>Confirm Password*</strong></label><br>
+    <input type="password" id="confirmPassword" autocomplete="new-password" minlength="8" maxlength="15" placeholder="confirm password" required><br><br>
+    <label for="agreement"><strong>Agreement*</strong></label>
+      <input type="checkbox" id="agreement" name="agreement" required>
+      By signing up, you agree to our <a href="terms.html" target="_blank">Terms and Conditions</a>
+    </label><br><br>
+    <input type="submit" value="Submit">
+
+
+
+  </form>
+
+
+
+
+</body>

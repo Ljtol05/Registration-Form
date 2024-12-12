@@ -1,0 +1,17 @@
+p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input[type="radio"] {
+  margin: 0.4rem;
+}
+
+fieldset {
+  border: 10px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 auto/* Add this line to shorten the outer border */
+}
